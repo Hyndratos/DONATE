@@ -1,0 +1,4 @@
+Order Allow,Deny
+<FilesMatch "^credits\.php$">
+Allow from all
+</FilesMatch>

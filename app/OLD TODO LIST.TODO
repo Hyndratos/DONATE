@@ -1,0 +1,111 @@
+--------------------------------------------------------------
+
+
+	THIS IS AN OLD TODO LIST - AND NO LONGER APPLIES.
+
+
+--------------------------------------------------------------
+
+
+
+SHIT TO REMEMBER:
+  ULib.ucl.addUser(Prometheus.Temp.Ply:SteamID(), nil, nil, "user")
+
+if Prometheus.Temp.Ply:IsUserGroup("moderator") then
+  ULib.ucl.addUser(Prometheus.Temp.Ply:SteamID(), nil, nil, "moderator+")
+elseif Prometheus.Temp.Ply:IsUserGroup("trials") then
+  ULib.ucl.addUser(Prometheus.Temp.Ply:SteamID(), nil, nil, "trials+")
+else
+  ULib.ucl.addUser(Prometheus.Temp.Ply:SteamID(), nil, nil, "vip")
+end
+
+if Prometheus.Temp.Ply:IsUserGroup("admin") then
+  ULib.ucl.addUser(Prometheus.Temp.Ply:SteamID(), nil, nil, "elite admin")
+elseif Prometheus.Temp.Ply:IsUserGroup("mod") then
+  ULib.ucl.addUser(Prometheus.Temp.Ply:SteamID(), nil, nil, "elite mod")
+else
+  ULib.ucl.addUser(Prometheus.Temp.Ply:SteamID(), nil, nil, "vip")
+end
+
+local modifier = 100
+local points = Prometheus.Temp.Ply.MoneySpent * modifier
+Prometheus.Temp.Ply:GivePoints(points)
+
+MORE PAYMENT GATEWAYS:
+ ☐ Add Fortumo support
+ ☐ Add Paysafe card support       -- Nazi review system
+ ☐ Add Skrill support
+ ☐ Add Cashu support
+ ☐ Add OneCard support
+
+FOR THE FORUM UPDATE:
+ ☐ Add XenForo support in a different way / with MySQL system
+ ☐ Add IPB support
+ ☐ Add SMF support
+ ☐ Add MyBB support
+ ☐ Add PhpBB support
+
+CURRENT LIST:
+ ☐ Add "Between" and "And" feature in main graph
+ ☐ Expire of TS3 rank
+ ☐ Import selected packages owned by users to a new server
+ ☐ Add bundle system
+ ☐ Add multiple console commands
+ ☐ Expand upon the API
+ ☐ Hook system for integrating functions to be ran at certain calls easier
+ ☐ EMail system (NEED SMTP FOR THIS PEOPLE - Or by default send to my webserver. Everytime email list is updated then send updated list to me too for storing locally on my server. Also ability to mass email customly)
+ ☐ Timed packages (Can only be bought once every so often)
+ ☐ Scaled points / darkrp money (Package you upgrade to - Package you upgrade from if to has more points/money than from + enabled by default, but can disable)
+ ☐ Improve support tickets
+ ☐ Make a slider for points amount selection
+ ☐ Choose weapon option in weapon action(Dropdown of pre specified weapons)
+ ☐ Add an option to ban the player if chargeback (integrate with neutron?)   
+
+ Custom job stuff:
+ ☐ "Secondary weapon"
+ ☐ "Kits" -> Weapons but a different category too <.<
+ ☐ Health
+   ☐ PlayerSpawn = function(ply) ply:SetHealth(500) return CLIENT end,
+      PlayerLoadout = function(ply) ply:SetHealth(500) return CLIENT end,
+ ☐ Armor
+   PlayerSpawn = function(ply) ply:SetArmor(500) return CLIENT end,
+   PlayerLoadout = function(ply) ply:SetArmor(500) return CLIENT end,
+
+ New ideas:
+☐ Implement weapon selecting, points slider, etc
+☐ Restrict package to a panel group
+☐ A way to add a user since people dont always log in
+☐ Quiz before being able to buy a certain pkg
+☐ Dropdown to restrict certain packages to certain payment gateways - huh?
+☐ Email a coupon code to a user upon purchase if enabled
+☐ Add the date a pkg was given in the prometheus panel - huh?
+☐ Give a defined amount of credits for a package purchase
+☐ Referral system, can get rewards for referring people (like package extensions, free package, credits, extra raffle entries)
+☐ Gain Prometheus credits for playing ingame x amount every x minutes
+☐ Select more than one upgradeable package
+☐ Wheel of fortune
+    - Disabled by default
+    - Pay for an amount of spins using credits/money
+    - Special abilities like wheels with free spins
+    - Wheels with only one spin per whenever
+    - Make sure the following don't get shown for specific users:
+        - Packages that aren't compatible with ones they own
+        - Packages they already own that aren't rebuyable
+        - Packages they can't get because they don't own a certain one
+    - Everything configurable, amount of spins that can be used within a certain timeframe(included forever)
+    - Packages included and the AMOUNT of times they are shown
+- Add notes to packages purchasing like a special message to the administrators
+
+API IDEAS:
+
+TODO BEFORE UPDATE:
+  - Display images for credits
+  - Add credits to lang file
+  - Fix stripe_purchase lang values being inconsistent with purchase_stripe
+  - Finally fix upgrade feature(Upgrade from multiple packages)
+  - Specific package sales (different percentage for each) - Just add a new field to the packages called sale price
+  - Add ability to add a custom navbar link
+  - Add Minecraft game option and RCon (Force screen upon user after donation - Input minecraft username, if online or what?)
+  - Add new parameter/sourcemod action for sourcemod store
+  - (Custom credits amount) - What's the point?
+  - Limit coupons to x amount per user

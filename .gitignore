@@ -1,0 +1,9 @@
+.idea/
+cache/cache.storage.127.0.0.1/
+cache/prometheusapp/
+cache/prometheusoldapp/
+cache/cache.storage.127.0.0.1/*
+cache/127001/*
+cache/licenseinfo.txt
+node_modules/
+bower_components/
